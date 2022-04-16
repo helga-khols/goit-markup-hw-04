@@ -155,6 +155,11 @@ img {
 .hero {
   padding: 200px 0;
   background-color: var(--accent-bg-color);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/bg-img.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .hero-title {
@@ -270,6 +275,33 @@ img {
   color: var(--secondary-text-color);
   margin-top: 10px;
   text-align: center;
+  margin-bottom: 16px;
+}
+
+.team-member-social {
+  display: flex;
+  justify-content: center;
+}
+
+.team-member-item + .team-member-item {
+  margin-left: 10px;
+}
+
+.team-member-link {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--main-bg-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: #afb1b8;
+}
+
+.team-member-link:hover,
+.team-member-link:focus {
+  background-color: var(--accent-color);
+  fill: var(--main-bg-color);
 }
 
 .footer {
