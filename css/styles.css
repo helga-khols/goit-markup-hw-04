@@ -46,12 +46,20 @@ img {
   width: 1200px;
   padding: 0px 15px;
   margin: 0 auto;
-  border: solid 1px black;
 }
 
 .section {
   padding: 94px 0;
 }
+
+.link {
+  cursor: pointer;
+}
+
+.list {
+  list-style: none;
+}
+
 .header .container {
   display: flex;
   align-items: center;
@@ -109,9 +117,7 @@ img {
 .studio {
   color: #000000;
 }
-.list {
-  list-style: none;
-}
+
 .visually-hidden {
   position: absolute;
   white-space: nowrap;
@@ -124,35 +130,46 @@ img {
   clip-path: inset(50%);
   margin: -1px;
 }
-.contacts {
+.contacts-list {
   display: flex;
 }
 
 .contact-item {
   margin-right: 50px;
+  display: flex;
+  color: var(--secondary-text-color);
 }
 
 .contact-item:last-child {
   margin-right: 0;
 }
-.link {
-  cursor: pointer;
+
+.contact-item:hover,
+.contact-item:focus {
+  color: var(--accent-color);
 }
 
-.contacts .link {
+.contact-icon {
+  margin-right: 10px;
+  fill: currentColor;
+}
+
+.contact-link {
   padding: 32px 0;
-  display: block;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  color: var(--secondary-text-color);
+  color: currentColor;
   text-decoration: none;
+  display: flex;
+  align-items: center;
 }
-.contacts .link:hover,
-.contacts .link:focus {
+.contact-link:hover,
+.contact-link:focus {
   color: var(--accent-color);
 }
+
 .hero {
   padding: 200px 0;
   background-color: var(--accent-bg-color);
@@ -161,6 +178,8 @@ img {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  max-width: 1600px;
+  margin: 0 auto;
 }
 
 .hero-title {
@@ -198,13 +217,7 @@ img {
 .advantage {
   background-color: var(--main-bg-color);
 }
-.advantage-title {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
-  color: var(--main-text-color);
-}
+
 .advantage-item {
   font-weight: 700;
   font-size: 14px;
@@ -212,11 +225,30 @@ img {
   text-transform: uppercase;
   color: var(--main-text-color);
   margin-bottom: 10px;
+  margin-top: 30px;
 }
 .advantage-list {
   display: flex;
   justify-content: space-between;
 }
+
+.advantage-link {
+  width: 270px;
+  height: 120px;
+  border-radius: 4px;
+  background-color: var(--secondary-bg-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: black;
+}
+
+.advantage-link:hover,
+.advantage-link:focus {
+  border: 1px solid #000000;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
 .advantage-info:not(:last-child) {
   margin-right: 30px;
 }
@@ -414,6 +446,10 @@ img {
   display: flex;
   margin-top: 20px;
 }
+
+.social-icon + .social-icon {
+  margin-left: 10px;
+}
 .social-link {
   width: 44px;
   height: 44px;
@@ -484,6 +520,13 @@ img {
   flex-basis: calc(100% / 3 - 30px);
   margin-left: 30px;
   margin-bottom: 30px;
+  cursor: pointer;
+}
+
+.porfolio-item:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+  border: 1px solid #eeeeee;
 }
 .card-info {
   padding-top: 20px;
